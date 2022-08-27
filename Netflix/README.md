@@ -8,7 +8,7 @@ Analyze the data and generate insights that could help Netflix ijn deciding whic
 
 ### Dataset
 
-Link: Dataset_link
+Dataset link: https://d2beiqkhq929f0.cloudfront.net/public_assets/assets/000/000/940/original/netflix.csv
 
 (After clicking on the above link, you can download the files by right-clicking on the page and clicking on "Save As", then naming the file as per your wish, with .csv as the extension.)
 
