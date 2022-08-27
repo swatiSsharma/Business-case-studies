@@ -5,9 +5,11 @@ Netflix is one of the most popular media and video streaming platforms. They hav
 
 #### Business Problem
 
-Analyze the data and generate insights that could help Netflix in deciding which type of shows/movies to produce and how they can grow the business in different countries
+Analyze the data and generate insights that could help Netflix in deciding which type of shows/movies to produce and how they can grow the business in different countries. 
+
 
 #### Solution to the Business Problem
 
-Link: https://drive.google.com/drive/folders/15xvP_QgaepiLdKPWKMl04mEM8r_uGTlF?usp=sharing
+Link: (https://drive.google.com/drive/folders/15xvP_QgaepiLdKPWKMl04mEM8r_uGTlF?usp=sharing)
+
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
