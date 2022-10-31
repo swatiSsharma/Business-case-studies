@@ -125,13 +125,13 @@ Data is available in 8 csv files:
 
 **Recommendations:**
 
-- 1)      From the distribution and statistical analysis we can observe the average time to complete the delivery is 12 days. which should be reduced to at least half, as due to high competition in the e-commerce market, it is vital to do so
-- 2)      In order to reduce the delivery time, if we look at the average time for the carrier to start the delivery itself takes at least 2 and a half days and the order approval time is 0.26 days. These two should be optimized as low as possible, which can result in delivery faster.
-- 3)      If we look at the Top states where delivery is really slow compared to the estimated date, they are all from the north Brazil region. Delivering faster in the northern states may create and increase new customers and revenue from the north.
-- 4)      As per Analysis products belonging to the â€œbed table bathâ€ category are being sold max among all available categories, we could produce more items related to this category.
-- 5)      Increasing the network in north Brazil, having small towns can help increase the customer base. As north Brazil has the worldâ€™s largest river and most extensive rain forest, must be a good travel destination, introducing necessary survival/ camping/adventure products can help increase revenue and order from the northern region
-- 6)      As per the analysis Credit card payments are more. So target can give offers to customers paying with a credit card and can also give them an Interest-free EMI scheme.
-- 7)      It was observed that an increasing trend in revenue and orders over time, yet during October and January sales are decreasing probably after Festival Sales. Introducing possible discounts on the not-so-running products can help sell more products during those low-going months.
+- 1) From the distribution and statistical analysis we can observe the average time to complete the delivery is 12 days. which should be reduced to at least half, as due to high competition in the e-commerce market, it is vital to do so
+- 2) In order to reduce the delivery time, if we look at the average time for the carrier to start the delivery itself takes at least 2 and a half days and the order approval time is 0.26 days. These two should be optimized as low as possible, which can result in delivery faster.
+- 3) If we look at the Top states where delivery is really slow compared to the estimated date, they are all from the north Brazil region. Delivering faster in the northern states may create and increase new customers and revenue from the north.
+- 4) As per Analysis products belonging to the â€œbed table bathâ€ category are being sold max among all available categories, we could produce more items related to this category.
+- 5) Increasing the network in north Brazil, having small towns can help increase the customer base. As north Brazil has the worldâ€™s largest river and most extensive rain forest, must be a good travel destination, introducing necessary survival/ camping/adventure products can help increase revenue and order from the northern region
+- 6) As per the analysis Credit card payments are more. So target can give offers to customers paying with a credit card and can also give them an Interest-free EMI scheme.
+- 7) It was observed that an increasing trend in revenue and orders over time, yet during October and January sales are decreasing probably after Festival Sales. Introducing possible discounts on the not-so-running products can help sell more products during those low-going months.
 
 #### Solution to the Business Problem
 
