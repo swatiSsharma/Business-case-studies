@@ -33,40 +33,40 @@ Miles:	The average number of miles the customer expects to walk/run each week
 
 #### Problem Scenarios:
 
--1. Import the dataset and do usual data analysis steps like checking the structure & characteristics of the dataset
--2. Detect Outliers (using boxplot, “describe” method by checking the difference between mean and median)
--3. Check if features like marital status, age have any effect on the product purchased (using countplot, histplots, boxplots etc)
--4. Representing the marginal probability like - what percent of customers have purchased KP281, KP481, or KP781 in a table (can use pandas.crosstab here)
--5. Check correlation among different factors using heat maps or pair plots.
--6. With all the above steps you can answer questions like: What is the probability of a male customer buying a KP781 treadmill?
--7. **Customer Profiling** - Categorization of users.
--8. **Probability** - marginal, conditional probability.
--9. Some recommendations and actionable insights, based on the inferences.
+- 1. Import the dataset and do usual data analysis steps like checking the structure & characteristics of the dataset
+- 2. Detect Outliers (using boxplot, “describe” method by checking the difference between mean and median)
+- 3. Check if features like marital status, age have any effect on the product purchased (using countplot, histplots, boxplots etc)
+- 4. Representing the marginal probability like - what percent of customers have purchased KP281, KP481, or KP781 in a table (can use pandas.crosstab here)
+- 5. Check correlation among different factors using heat maps or pair plots.
+- 6. With all the above steps you can answer questions like: What is the probability of a male customer buying a KP781 treadmill?
+- 7. **Customer Profiling** - Categorization of users.
+- 8. **Probability** - marginal, conditional probability.
+- 9. Some recommendations and actionable insights, based on the inferences.
 
 #### Insights & Recommendation:
 
-** Business Insights: **
+**Business Insights:**
 
-A. People with higher incomes prefer to buy KP781 over other products.
-B. People with lower and middle income prefer to buy KP281 and KP481 over the other products.
-C. People with higher fitness levels prefer to buy KP781 over other products.
-D. People with lower and middle fitness levels prefer to buy KP281 and KP481 over the other products.
-E. People who expect extensive use of the product prefer to buy KP781 over the other products.
-F. People who expect less extensive use of the product prefer to buy KP281 and KP481 over the other products.
-G. Marital Status seems to have no apparent effect on individual preferences to buy different products.
-H. Males prefer to buy KP781 significantly more than Women.
-I. Females prefer to buy KP281 and KP481 significantly more than Men.
-J. People with higher education prefer to buy KP781 over other products.
-K. People with lower and middle education prefer to buy KP281 and KP481 over the other products.
-L. Individuals with Ages between 20-30 are more likely to buy any of the products than other Age groups.
+- A. People with higher incomes prefer to buy KP781 over other products.
+- B. People with lower and middle income prefer to buy KP281 and KP481 over the other products.
+- C. People with higher fitness levels prefer to buy KP781 over other products.
+- D. People with lower and middle fitness levels prefer to buy KP281 and KP481 over the other products.
+- E. People who expect extensive use of the product prefer to buy KP781 over the other products.
+- F. People who expect less extensive use of the product prefer to buy KP281 and KP481 over the other products.
+- G. Marital Status seems to have no apparent effect on individual preferences to buy different products.
+- H. Males prefer to buy KP781 significantly more than Women.
+- I. Females prefer to buy KP281 and KP481 significantly more than Men.
+- J. People with higher education prefer to buy KP781 over other products.
+- K. People with lower and middle education prefer to buy KP281 and KP481 over the other products.
+- L. Individuals with Ages between 20-30 are more likely to buy any of the products than other Age groups.
 
-** Business Recommendations: **
+**Business Recommendations:**
 
-A. Aerofit should target selling KP781 products to men with higher fitness levels, higher income, and higher education.
-B. Aerofit should target selling KP281 and KP481 products to individuals with average or below-average fitness levels, income, and education.
-C. Aerofit should target selling the KP781 product to the people who are expecting more extensive usage of the product.
-D. Aerofit should target selling KP281 and KP481 products to the people who are expecting less extensive usage of the product.
-E. Aerofit should target selling products to people who are aged between 20-30 years, more than other age groups. Targeted advertisements should be used for the same.
+- A. Aerofit should target selling KP781 products to men with higher fitness levels, higher income, and higher education.
+- B. Aerofit should target selling KP281 and KP481 products to individuals with average or below-average fitness levels, income, and education.
+- C. Aerofit should target selling the KP781 product to the people who are expecting more extensive usage of the product.
+- D. Aerofit should target selling KP281 and KP481 products to the people who are expecting less extensive usage of the product.
+- E. Aerofit should target selling products to people who are aged between 20-30 years, more than other age groups. Targeted advertisements should be used for the same.
 
 #### Solution to the Business Problem
 
