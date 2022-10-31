@@ -10,7 +10,7 @@ Analyze the data and generate insights that could help Netflix in deciding which
 
 #### Solution to the Business Problem
 
-Link: (https://drive.google.com/drive/folders/15xvP_QgaepiLdKPWKMl04mEM8r_uGTlF?usp=share_link 
+Link: (https://drive.google.com/drive/folders/15xvP_QgaepiLdKPWKMl04mEM8r_uGTlF?usp=share_link) 
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## 2.  TARGET - SQL
@@ -24,6 +24,7 @@ This business case has information of 100k orders from 2016 to 2018 made at Targ
 #### Solution to the Business Problem
 
 Link: (https://drive.google.com/drive/folders/1JMEBDIg8RdG4pXVG9KHDbcUGkh5VqzY_?usp=share_link)
+
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## 3.  AEROFIT - Descriptive Statistics & Probability
 
@@ -39,6 +40,7 @@ The market research team at AeroFit wants to identify the characteristics of the
 #### Solution to the Business Problem
 
 Link: (https://drive.google.com/drive/folders/1t-catAslfYOw2JGEblQFme3OdHo5rIoo?usp=share_link)
+
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## 4. Walmart - Confidence Interval and Central limit theorem (CLT)
 
@@ -51,5 +53,6 @@ The Management team at Walmart Inc. wants to analyze the customer purchase behav
 #### Solution to the Business Problem
 
 Link: (https://drive.google.com/drive/folders/1ZjqcNSWsj_618WDkJhG_lBIKazCksEcJ?usp=share_link)
+
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
