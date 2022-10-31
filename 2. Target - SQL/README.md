@@ -32,28 +32,28 @@ Data is available in 8 csv files:
 
 #### Problem Scenarios
 
-1. Import the dataset and do usual exploratory analysis steps like checking the structure & characteristics of the dataset
+- **1. Import the dataset and do usual exploratory analysis steps like checking the structure & characteristics of the dataset**
 
   - Data type of columns in a table
   - Time period for which the data is given
   - Cities and States covered in the dataset
 
-2. In-depth Exploration:
+- **2. In-depth Exploration:**
 
   - Is there a growing trend on e-commerce in Brazil? How can we describe a complete scenario? Can we see some seasonality with peaks at specific months?
   - What time do Brazilian customers tend to buy (Dawn, Morning, Afternoon or Night)?
 
-3. Evolution of E-commerce orders in the Brazil region:
+- **3. Evolution of E-commerce orders in the Brazil region:**
 
   - Get month on month orders by region, states
   - How are customers distributed in Brazil
 
-4. Impact on Economy: Analyze the money movemented by e-commerce by looking at order prices, freight and others.
+- **4. Impact on Economy: Analyze the money movemented by e-commerce by looking at order prices, freight and others.**
 
   - Get % increase in cost of orders from 2017 to 2018 (include months between Jan to Aug only)
   - Mean & Sum of price and freight value by customer state
 
-5. Analysis on sales, freight and delivery time
+- **5. Analysis on sales, freight and delivery time**
 
   - Calculate days between purchasing, delivering and estimated delivery
   - Create columns:
@@ -65,7 +65,7 @@ Data is available in 8 csv files:
      - Top 5 states with highest/lowest average time to delivery
      - Top 5 states where delivery is really fast/ not so fast compared to estimated date
 
-6. Payment type analysis:
+- **6. Payment type analysis:**
 
   - Month over Month count of orders for different payment types
   - Distribution of payment installments and count of orders
