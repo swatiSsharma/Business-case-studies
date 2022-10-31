@@ -1,49 +1,97 @@
-# Netflix
+# Walmart - Confidence Interval and Central limit theorem (CLT)
 
-Netflix is one of the most popular media and video streaming platforms. They have over 10000 movies or tv shows available on their platform, as of mid-2021, they have over 222M Subscribers globally. This tabular dataset consists of listings of all the movies and tv shows available on Netflix, along with details such as - cast, directors, ratings, release year, duration, etc.
+Walmart is an American multinational retail corporation that operates a chain of supercenters, discount departmental stores, and grocery stores from the United States. Walmart has more than 100 million customers worldwide.
 
-### Business Problem
+#### Business Problem
 
-Analyze the data and generate insights that could help Netflix ijn deciding which type of shows/movies to produce and how they can grow the business in different countries
+The Management team at Walmart Inc. wants to analyze the customer purchase behavior (specifically, purchase amount) against the customer’s gender and the various other factors to help the business make better decisions. They want to understand if the spending habits differ between male and female customers: Do women spend more on Black Friday than men? (Assume 50 million customers are male and 50 million are female).
 
-### Dataset
+#### Dataset
 
-Dataset link: https://d2beiqkhq929f0.cloudfront.net/public_assets/assets/000/000/940/original/netflix.csv
+The company collected the transactional data of customers who purchased products from the Walmart Stores during Black Friday. The dataset has the following features:
+Dataset link: (https://d2beiqkhq929f0.cloudfront.net/public_assets/assets/000/001/293/original/walmart_data.csv?1641285094)
 
-(After clicking on the above link, you can download the files by right-clicking on the page and clicking on "Save As", then naming the file as per your wish, with .csv as the extension.)
+User_ID:	User ID
+Product_ID:	Product ID
+Gender:	Sex of User
+Age:	Age in bins
+Occupation:	Occupation(Masked)
+City_Category:	Category of the City (A,B,C)
+StayInCurrentCityYears:	Number of years stay in current city
+Marital_Status:	Marital Status
+ProductCategory:	Product Category (Masked)
+Purchase:	Purchase Amount
 
-The dataset provided to you consists of a list of all the TV shows/movies available on Netflix:
+#### Problem Scenarios
 
-Show_id: Unique ID for every Movie / Tv Show Type: Identifier - A Movie or TV Show Title: Title of the Movie / Tv Show Director: Director of the Movie Cast: Actors involved in the movie/show Country: Country where the movie/show was produced Date_added: Date it was added on Netflix Release_year: Actual Release year of the movie/show Rating: TV Rating of the movie/show Duration: Total Duration - in minutes or number of seasons Listed_in: Genre Description: The summary description
-
-#### Hints
-
-The exploration should have a goal. As you explore the data, keep in mind that you want to answer which type of shows to produce and how to grow the business. Ensure each recommendation is backed by data. The company is looking for data-driven insights, not personal opinions or anecdotes. Assume that you are presenting your findings to business executives who have only a basic understanding of data science. Avoid unnecessary technical jargon. Start by exploring a few questions: What type of content is available in different countries? How has the number of movies released per year changed over the last 20-30 years? Comparison of tv shows vs. movies. What is the best time to launch a TV show? Analysis of actors/directors of different types of shows/movies. Does Netflix has more focus on TV Shows than movies in recent years Understanding what content is available in different countries
+1) Import the dataset and do usual data analysis steps like checking the structure & characteristics of the dataset.
+2) Detect Null values & Outliers (using boxplot, “describe” method by checking the difference between mean and median, isnull etc.)
+3) Do some data exploration steps like:
+   - Tracking the amount spent per transaction of all the 50 million female customers, and all the 50 million male customers, calculate the average, and conclude the results.
+   - Inference after computing the average female and male expenses.
+   - Use the sample average to find out an interval within which the population average will lie. Using the sample of female customers you will calculate the interval within which the average spending of 50 million male and female customers may lie.
+4) Use the Central limit theorem to compute the interval. Change the sample size to observe the distribution of the mean of the expenses by female and male customers.
+   - The interval that you calculated is called Confidence Interval. The width of the interval is mostly decided by the business: Typically 90%, 95%, or 99%. Play around with the width parameter and report the observations.
+5) Conclude the results and check if the confidence intervals of average male and female spends are overlapping or not overlapping. How can Walmart leverage this conclusion to make changes or improvements?
+6) Perform the same activity for Married vs Unmarried and Age
+   - For Age, you can try bins based on life stages: 0-17, 18-25, 26-35, 36-50, 51+ years.
+7) Give recommendations and action items to Walmart.
 
 ### Recommendation Based on Insights gathered:
 
-1. Netflix should focus on adding content to the platform which is released in the recent past, instead of adding old content. Source insights: 9.1(observation 1), 9.8 (observations 1 and 2)
+**Business Insights**
+- Male customers are significantly more than Females ie 75% of the users are Male and 25% are Female.
+- Buyers with ages between 26 and 35 are significantly more than any other age category ie ~ 80% of the users are between the ages 18-50 (40%: 26-35, 18%: 18-25, 20%: 36-45).
+- There are more buyers in City Category B than in the other two City Categories.
+- Buyers who have spent 1 year in the city are significantly more than the buyers who have spent 2 years, 3 years, more than 4 years, and less than 1 year in the city ie 35% Staying in the city from 1 year, 18% from 2 years, 17% from 3 years.
+- Unmarried buyers are more in numbers than married buyers ie 60% are single and 40% are married.
+- Males in City Category C tend to spend more amount of money than all the other individual buyers.
+- There are 20 product categories in total wherein 1, 5, 8, & 11 have the highest purchasing frequency.
+- There are 20 different types of occupation in the city.
+- With 90%, 95%, and even 99% of confidence levels, we can see that Male buyers spend significantly more money than Female Buyers since there is no overlap between confidence intervals.
+- With 90%, 95%, and even 99% of confidence levels, we can see that Marital Status has no impact on spending.
+- With 90%, 95%, and even 99% of confidence levels, we can see that buyers aged between 0-17, significantly spend less money than the other Buyers, since there is no overlap between confidence intervals.
+- With 90%, 95%, and even 99% of confidence levels, we can see that buyers aged between 51-55, significantly spend more money than the other Buyers, since there is no overlap between confidence intervals.
+- Products under categories 1, 5, and 8 generate a huge amount of revenue for Walmart.
 
-2. Netflix should add movies to its platform which are produced preferably in the United States, India, United Kingdom, Canada, and France. Source insights: 9.1(observation 6), 9.3
+**Confidence Interval**
 
-3. Netflix should add tv shows to its platform which are produced preferably in the United States, United Kingdom, and Japan. South Korea and Canada. Source insights: 9.1(observation 6), 9.3
+- Confidence Interval by Gender 
+  - Now using the Central Limit Theorem for the population:
+1. Average amount spent by male customers is 9,85,830.10
+2. Average amount spent by female customers is 8,07,370.73
+  - Now we can infer about the population that, 95% of the time:
+1. Average amount spent by the male customer will lie in between: (895617.83, 955070.97)
+2. Average amount spent by the female customer will lie between: (673254.77, 750794.02)
 
-4. Netflix should add tv shows to its platform which are produced preferably for mature audiences only. And they should add movies to their platform which are produced preferably for audiences aged 14 or more. Source insights: 9.2, 9.9(observations 7 and 8)
+- Confidence Interval by Marital_Status
+1. Married confidence interval of means: (806668.83, 880384.76)
+2. Unmarried confidence interval of means: (848741.18, 912410.38)
 
-5. Netflix should focus on adding content to their platform which preferably falls under the categories of, International movies/tv shows, Drama, and Comedy. Source insights: 9.4, 9.9(observations 5 and 6)
+- Confidence Interval by Age
+1. For age 26-35 --> confidence interval of means: (945034.42, 1034284.21)
+2. For age 36-45 --> confidence interval of means: (   823347.80, 935983.62)
+3. For age 18-25 --> confidence interval of means: (   801632.78, 908093.46)
+4. For age 46-50 --> confidence interval of means: (   713505.63, 871591.93)
+5. For age 51-55 --> confidence interval of means: (   692392.43, 834009.42)
+6. For age 55        --> confidence interval of means: (   476948.26, 602446.23)
+7. For age 0-17    --> confidence interval of means: (   527662.46, 710073.17)
 
-6. Netflix should collaborate with the following actor-director duos to produce content for Netflix. Anupam Kher, David Dhawan Samuel Jackson, Jay Karas Takahiro Sakurai, Kazuya Murata David Attenborough, Stan Lathan Source insights: 9.5(observation 1 and 2), 9.6(observation 1 and 2), 9.9(observations 1,2,3 and 4)
+**Business Recommendation**
 
-7. Netflix should preferably add new movies or tv shows on the 1st or 15th day of the month. Source insights: 9.7(observation 2), 9.8(observation 5), 9.10(observation 2)
+- Men spent more money than women, So the company should focus on retaining male customers and getting more male customers.
+- Could probably create an additional offer for female buyers, so that the no.of potential female buyers would increase, and hence the average spend would also increase for female buyers.
+- Product_Category - 1, 5, 8, & 11 have the highest purchasing frequency. it means these are the products in these categories are liked more by customers. The company can focus on selling more of these products or selling more of the products which are purchased less.
+- The Average spending of married and unmarried are too close to each other. So, the differentiation between them is very low. Hence, an equal approach to target married and unmarried customers would be advised. Both couple-type products and other products will get sold based on the data given.
+- Unmarried customers spend more money than married customers, So the company should focus on the acquisition of Unmarried customers.
+- Customers in age 18-45 spend more money than others, So the company should focus on the acquisition of customers who are in aged 18-45
+- Male customers living in City_Category C spend more money than other male customers living in B or C, Selling more products in City_Category C will help the company increase its revenue.
+- Walmart should invest in advertisements for expensive products to target male buyers in city category C.
+- Walmart should collaborate with celebrities to promote male products.
+- Walmart should invest in targeted advertisements for individual buyers aged between 51-55.
+- Walmart should engage in different marketing campaigns to target individual buyers in city category B.
+- Walmart should invest in ad campaigns to boost sales of products categorized under 1, 5, and 8 product categories.
 
-8. Along with the average length of feature films, Netflix should also add short films to its platform. Source insights: 9.12(observation: 2)
+#### Solution to the Business Problem
 
-9. Movies and TV shows are generally available for adult group age, Netflix should collaborate with producers from Japan as they have expertise in Anime and produce content for younger age groups too Source insights: 9.13(Chart 4. Anime Series), 9.13(Chart 6), 9.14(Chart 4)
-
-10. Inference: India's choice for movies has always been "TV-14" (unsuitable for children under 14 years of age) rated since around the 1980s. This choice does not come as a surprise since India being a Familialistic nation would naturally want to watch movies as a Family which includes everyone from children to grandparents without any explicit content. However, it is surprising to see a slight change in the Movie/TV show trends since the pandemic started. Of course, there has been a significant overall reduction in the number of movies rolled out since the pandemic, but the decline in "TV-14" rated shows is more strong compared to the "TV-MA" rated shows. This has supposedly got to be associated with the behavioral change that has been inflicted upon us since lockdowns started. People have probably started to watch movies individually rather not as a Family or group which has led to a lesser decline in movies meant for mature adults.
-
-Recommendation: Netflix should add more movies that are "TV-MA" and "TV-14" rated.
-
-Source insights: 9.17 (9.17.3 and 9.17.4)
-
-### Link: https://drive.google.com/drive/folders/15xvP_QgaepiLdKPWKMl04mEM8r_uGTlF?usp=sharing
+Link: (https://drive.google.com/drive/folders/1ZjqcNSWsj_618WDkJhG_lBIKazCksEcJ?usp=share_link)
