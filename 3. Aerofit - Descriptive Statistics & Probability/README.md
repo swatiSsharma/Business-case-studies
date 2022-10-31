@@ -1,49 +1,73 @@
-# Netflix
+# Aerofit - Descriptive Statistics & Probability
 
-Netflix is one of the most popular media and video streaming platforms. They have over 10000 movies or tv shows available on their platform, as of mid-2021, they have over 222M Subscribers globally. This tabular dataset consists of listings of all the movies and tv shows available on Netflix, along with details such as - cast, directors, ratings, release year, duration, etc.
+Aerofit is a leading brand in the field of fitness equipment. Aerofit provides a product range including machines such as treadmills, exercise bikes, gym equipment, and fitness accessories to cater to the needs of all categories of people.
 
-### Business Problem
+#### Business Problem
 
-Analyze the data and generate insights that could help Netflix ijn deciding which type of shows/movies to produce and how they can grow the business in different countries
+The market research team at AeroFit wants to identify the characteristics of the target audience for each type of treadmill offered by the company, to provide a better recommendation of the treadmills to the new customers. The team decides to investigate whether there are differences across the product with respect to customer characteristics.
 
-### Dataset
+  - Perform descriptive analytics **to create a customer profile** for each AeroFit treadmill product by developing appropriate tables and charts.
+  - For each AeroFit treadmill product, construct **two-way contingency tables** and compute all **conditional and marginal probabilities** along with their insights/impact on the business.
 
-Dataset link: https://d2beiqkhq929f0.cloudfront.net/public_assets/assets/000/000/940/original/netflix.csv
+#### Dataset
 
-(After clicking on the above link, you can download the files by right-clicking on the page and clicking on "Save As", then naming the file as per your wish, with .csv as the extension.)
+The company collected the data on individuals who purchased a treadmill from the AeroFit stores during the prior three months. The dataset has the following features:
 
-The dataset provided to you consists of a list of all the TV shows/movies available on Netflix:
+Dataset link: (https://d2beiqkhq929f0.cloudfront.net/public_assets/assets/000/001/125/original/aerofit_treadmill.csv?1639992749)
 
-Show_id: Unique ID for every Movie / Tv Show Type: Identifier - A Movie or TV Show Title: Title of the Movie / Tv Show Director: Director of the Movie Cast: Actors involved in the movie/show Country: Country where the movie/show was produced Date_added: Date it was added on Netflix Release_year: Actual Release year of the movie/show Rating: TV Rating of the movie/show Duration: Total Duration - in minutes or number of seasons Listed_in: Genre Description: The summary description
+Product Purchased:	KP281, KP481, or KP781
+Age:	In years
+Gender:	Male/Female
+Education:	In years
+MaritalStatus:	Single or partnered
+Usage:	The average number of times the customer plans to use the treadmill each week.
+Income:	Annual income (in $)
+Fitness:	Self-rated fitness on a 1-to-5 scale, where 1 is the poor shape and 5 is the excellent shape.
+Miles:	The average number of miles the customer expects to walk/run each week
 
-#### Hints
+**Product Portfolio:**
 
-The exploration should have a goal. As you explore the data, keep in mind that you want to answer which type of shows to produce and how to grow the business. Ensure each recommendation is backed by data. The company is looking for data-driven insights, not personal opinions or anecdotes. Assume that you are presenting your findings to business executives who have only a basic understanding of data science. Avoid unnecessary technical jargon. Start by exploring a few questions: What type of content is available in different countries? How has the number of movies released per year changed over the last 20-30 years? Comparison of tv shows vs. movies. What is the best time to launch a TV show? Analysis of actors/directors of different types of shows/movies. Does Netflix has more focus on TV Shows than movies in recent years Understanding what content is available in different countries
+- The KP281 is an entry-level treadmill that sells for $1,500.
+- The KP481 is for mid-level runners that sell for $1,750.
+- The KP781 treadmill is having advanced features that sell for $2,500.
 
-### Recommendation Based on Insights gathered:
+#### Problem Scenarios:
 
-1. Netflix should focus on adding content to the platform which is released in the recent past, instead of adding old content. Source insights: 9.1(observation 1), 9.8 (observations 1 and 2)
+-1. Import the dataset and do usual data analysis steps like checking the structure & characteristics of the dataset
+-2. Detect Outliers (using boxplot, “describe” method by checking the difference between mean and median)
+-3. Check if features like marital status, age have any effect on the product purchased (using countplot, histplots, boxplots etc)
+-4. Representing the marginal probability like - what percent of customers have purchased KP281, KP481, or KP781 in a table (can use pandas.crosstab here)
+-5. Check correlation among different factors using heat maps or pair plots.
+-6. With all the above steps you can answer questions like: What is the probability of a male customer buying a KP781 treadmill?
+-7. **Customer Profiling** - Categorization of users.
+-8. **Probability** - marginal, conditional probability.
+-9. Some recommendations and actionable insights, based on the inferences.
 
-2. Netflix should add movies to its platform which are produced preferably in the United States, India, United Kingdom, Canada, and France. Source insights: 9.1(observation 6), 9.3
+#### Insights & Recommendation:
 
-3. Netflix should add tv shows to its platform which are produced preferably in the United States, United Kingdom, and Japan. South Korea and Canada. Source insights: 9.1(observation 6), 9.3
+** Business Insights: **
 
-4. Netflix should add tv shows to its platform which are produced preferably for mature audiences only. And they should add movies to their platform which are produced preferably for audiences aged 14 or more. Source insights: 9.2, 9.9(observations 7 and 8)
+A. People with higher incomes prefer to buy KP781 over other products.
+B. People with lower and middle income prefer to buy KP281 and KP481 over the other products.
+C. People with higher fitness levels prefer to buy KP781 over other products.
+D. People with lower and middle fitness levels prefer to buy KP281 and KP481 over the other products.
+E. People who expect extensive use of the product prefer to buy KP781 over the other products.
+F. People who expect less extensive use of the product prefer to buy KP281 and KP481 over the other products.
+G. Marital Status seems to have no apparent effect on individual preferences to buy different products.
+H. Males prefer to buy KP781 significantly more than Women.
+I. Females prefer to buy KP281 and KP481 significantly more than Men.
+J. People with higher education prefer to buy KP781 over other products.
+K. People with lower and middle education prefer to buy KP281 and KP481 over the other products.
+L. Individuals with Ages between 20-30 are more likely to buy any of the products than other Age groups.
 
-5. Netflix should focus on adding content to their platform which preferably falls under the categories of, International movies/tv shows, Drama, and Comedy. Source insights: 9.4, 9.9(observations 5 and 6)
+** Business Recommendations: **
 
-6. Netflix should collaborate with the following actor-director duos to produce content for Netflix. Anupam Kher, David Dhawan Samuel Jackson, Jay Karas Takahiro Sakurai, Kazuya Murata David Attenborough, Stan Lathan Source insights: 9.5(observation 1 and 2), 9.6(observation 1 and 2), 9.9(observations 1,2,3 and 4)
+A. Aerofit should target selling KP781 products to men with higher fitness levels, higher income, and higher education.
+B. Aerofit should target selling KP281 and KP481 products to individuals with average or below-average fitness levels, income, and education.
+C. Aerofit should target selling the KP781 product to the people who are expecting more extensive usage of the product.
+D. Aerofit should target selling KP281 and KP481 products to the people who are expecting less extensive usage of the product.
+E. Aerofit should target selling products to people who are aged between 20-30 years, more than other age groups. Targeted advertisements should be used for the same.
 
-7. Netflix should preferably add new movies or tv shows on the 1st or 15th day of the month. Source insights: 9.7(observation 2), 9.8(observation 5), 9.10(observation 2)
+#### Solution to the Business Problem
 
-8. Along with the average length of feature films, Netflix should also add short films to its platform. Source insights: 9.12(observation: 2)
-
-9. Movies and TV shows are generally available for adult group age, Netflix should collaborate with producers from Japan as they have expertise in Anime and produce content for younger age groups too Source insights: 9.13(Chart 4. Anime Series), 9.13(Chart 6), 9.14(Chart 4)
-
-10. Inference: India's choice for movies has always been "TV-14" (unsuitable for children under 14 years of age) rated since around the 1980s. This choice does not come as a surprise since India being a Familialistic nation would naturally want to watch movies as a Family which includes everyone from children to grandparents without any explicit content. However, it is surprising to see a slight change in the Movie/TV show trends since the pandemic started. Of course, there has been a significant overall reduction in the number of movies rolled out since the pandemic, but the decline in "TV-14" rated shows is more strong compared to the "TV-MA" rated shows. This has supposedly got to be associated with the behavioral change that has been inflicted upon us since lockdowns started. People have probably started to watch movies individually rather not as a Family or group which has led to a lesser decline in movies meant for mature adults.
-
-Recommendation: Netflix should add more movies that are "TV-MA" and "TV-14" rated.
-
-Source insights: 9.17 (9.17.3 and 9.17.4)
-
-### Link: https://drive.google.com/drive/folders/15xvP_QgaepiLdKPWKMl04mEM8r_uGTlF?usp=sharing
+Link: (https://drive.google.com/drive/folders/1t-catAslfYOw2JGEblQFme3OdHo5rIoo?usp=share_link)
