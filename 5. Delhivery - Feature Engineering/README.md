@@ -1,97 +1,119 @@
-# Walmart - Confidence Interval and Central limit theorem (CLT)
+# Delhivery - Feature Engineering 
 
-Walmart is an American multinational retail corporation that operates a chain of supercenters, discount departmental stores, and grocery stores from the United States. Walmart has more than 100 million customers worldwide.
+Delhivery is the largest and fastest-growing fully integrated player in India by revenue in Fiscal 2021. They aim to build the operating system for commerce, through a combination of world-class infrastructure, logistics operations of the highest quality, and cutting-edge engineering and technology capabilities.  
+
+The Data team builds intelligence and capabilities using this data that helps them to widen the gap between the quality, efficiency, and profitability of their business versus their competitors.
 
 #### Business Problem
 
-The Management team at Walmart Inc. wants to analyze the customer purchase behavior (specifically, purchase amount) against the customer’s gender and the various other factors to help the business make better decisions. They want to understand if the spending habits differ between male and female customers: Do women spend more on Black Friday than men? (Assume 50 million customers are male and 50 million are female).
+- The company wants to understand and process the data coming out of data engineering pipelines:
+
+  >• Clean, sanitize and manipulate data to get useful features out of raw fields
+  >• Make sense out of the raw data and help the data science team to build forecasting models on it.
 
 #### Dataset
 
-The company collected the transactional data of customers who purchased products from the Walmart Stores during Black Friday. The dataset has the following features:
-Dataset link: (https://d2beiqkhq929f0.cloudfront.net/public_assets/assets/000/001/293/original/walmart_data.csv?1641285094)
+The company collected the transactional data of customers. The dataset has the following features:
+Dataset link: (https://d2beiqkhq929f0.cloudfront.net/public_assets/assets/000/001/551/original/delhivery_data.csv?1642751181)
 
-User_ID:	User ID
-Product_ID:	Product ID
-Gender:	Sex of User
-Age:	Age in bins
-Occupation:	Occupation(Masked)
-City_Category:	Category of the City (A,B,C)
-StayInCurrentCityYears:	Number of years stay in current city
-Marital_Status:	Marital Status
-ProductCategory:	Product Category (Masked)
-Purchase:	Purchase Amount
+#### Column Profiling
+
+- data :  tells whether the data is testing or training data
+- trip_creation_time : Timestamp of trip creation
+- route_schedule_uuid : Unique Id for a particular route schedule
+- route_type : Transportation type 
+    - FTL – Full Truck Load: FTL shipments get to the destination sooner, as the truck is making no other pickups or drop-offs along the way
+    - Carting: Handling system consisting of small vehicles (carts)
+- trip_uuid : Unique ID given to a particular trip (A trip may include different source and destination centers)
+- source_center : Source ID of trip origin
+- source_name : Source Name of trip origin
+- destination_cente : Destination ID
+- destination_name : Destination Name
+- od_start_time : Trip start time
+- od_end_time : Trip end time
+- start_scan_to_end_scan : Time taken to deliver from source to destination
+- is_cutoff : Unknown field
+- cutoff_factor : Unknown field
+- cutoff_timestamp : Unknown field
+- actual_distance_to_destination : Distance in Kms between source and destination warehouse
+- actual_time : Actual time taken to complete the delivery (Cumulative)
+- osrm_time : An open-source routing engine time calculator which computes the shortest path between points in a given map (Includes usual traffic, distance through major and minor roads) and gives the time (Cumulative)
+- osrm_distance : An open-source routing engine which computes the shortest path between points in a given map (Includes usual traffic, distance through major and minor roads) (Cumulative)
+- factor : Unknown field
+- segment_actual_time : This is a segment time. Time taken by the subset of the package delivery
+- segment_osrm_time : This is the OSRM segment time. Time taken by the subset of the package delivery
+- segment_osrm_distance : This is the OSRM distance. Distance covered by subset of the package delivery
+- segment_factor : Unknown field
 
 #### Problem Scenarios
 
-1) Import the dataset and do usual data analysis steps like checking the structure & characteristics of the dataset.
-2) Detect Null values & Outliers (using boxplot, “describe” method by checking the difference between mean and median, isnull etc.)
-3) Do some data exploration steps like:
-   - Tracking the amount spent per transaction of all the 50 million female customers, and all the 50 million male customers, calculate the average, and conclude the results.
-   - Inference after computing the average female and male expenses.
-   - Use the sample average to find out an interval within which the population average will lie. Using the sample of female customers you will calculate the interval within which the average spending of 50 million male and female customers may lie.
-4) Use the Central limit theorem to compute the interval. Change the sample size to observe the distribution of the mean of the expenses by female and male customers.
-   - The interval that you calculated is called Confidence Interval. The width of the interval is mostly decided by the business: Typically 90%, 95%, or 99%. Play around with the width parameter and report the observations.
-5) Conclude the results and check if the confidence intervals of average male and female spends are overlapping or not overlapping. How can Walmart leverage this conclusion to make changes or improvements?
-6) Perform the same activity for Married vs Unmarried and Age
-   - For Age, you can try bins based on life stages: 0-17, 18-25, 26-35, 36-50, 51+ years.
-7) Give recommendations and action items to Walmart.
+In-depth analysis and feature engineering to be done : 
+    
+    > - time taken between od_start_time and od_end_time 
+    > - hypothesis testing/ Visual analysis : population mean of start_scan_to_end_scan & time taken between od_start_time and od_end_time
+    > - hypothesis testing/ visual analysis :
+            - actual_time aggregated value and OSRM time aggregated value 
+    > - hypothesis testing/ visual analysis :
+            - actual_time aggregated value and segment actual time 
+    > - hypothesis testing/ visual analysis : 
+            - osrm distance aggregated value and segment osrm distance 
+    > - hypothesis testing/ visual analysis :
+            - osrm time aggregated value and segment osrm time aggregated value
+    > - outliers in the numerical variables 
+    > - outliers using the IQR method.
+    > - one-hot encoding of categorical variables (like route_type)
+    > - Normalize/ Standardize the numerical features using MinMaxScaler or StandardScaler.
 
-### Recommendation Based on Insights gathered:
+#### Inferences and Recommendations
 
-**Business Insights**
-- Male customers are significantly more than Females ie 75% of the users are Male and 25% are Female.
-- Buyers with ages between 26 and 35 are significantly more than any other age category ie ~ 80% of the users are between the ages 18-50 (40%: 26-35, 18%: 18-25, 20%: 36-45).
-- There are more buyers in City Category B than in the other two City Categories.
-- Buyers who have spent 1 year in the city are significantly more than the buyers who have spent 2 years, 3 years, more than 4 years, and less than 1 year in the city ie 35% Staying in the city from 1 year, 18% from 2 years, 17% from 3 years.
-- Unmarried buyers are more in numbers than married buyers ie 60% are single and 40% are married.
-- Males in City Category C tend to spend more amount of money than all the other individual buyers.
-- There are 20 product categories in total wherein 1, 5, 8, & 11 have the highest purchasing frequency.
-- There are 20 different types of occupation in the city.
-- With 90%, 95%, and even 99% of confidence levels, we can see that Male buyers spend significantly more money than Female Buyers since there is no overlap between confidence intervals.
-- With 90%, 95%, and even 99% of confidence levels, we can see that Marital Status has no impact on spending.
-- With 90%, 95%, and even 99% of confidence levels, we can see that buyers aged between 0-17, significantly spend less money than the other Buyers, since there is no overlap between confidence intervals.
-- With 90%, 95%, and even 99% of confidence levels, we can see that buyers aged between 51-55, significantly spend more money than the other Buyers, since there is no overlap between confidence intervals.
-- Products under categories 1, 5, and 8 generate a huge amount of revenue for Walmart.
+**Insights and Observations**
 
-**Confidence Interval**
+- 14817 different trips happened between source to destinations during 2018 , September and October.
+- 1504 delivery routes on which trips are happening.
+- we have 1508 unique source centers and 1481 unique destination centers
+- From 14817 total different trips , we have  8908 (60%) of the trip-routes are Carting , which consists of small vehicles and 5909 (40%) of total trip-routes are FTL : which are Full Truck Load get to the destination sooner. as no other pickups or drop offs along the way .
 
-- Confidence Interval by Gender 
-  - Now using the Central Limit Theorem for the population:
-1. Average amount spent by male customers is 9,85,830.10
-2. Average amount spent by female customers is 8,07,370.73
-  - Now we can infer about the population that, 95% of the time:
-1. Average amount spent by the male customer will lie in between: (895617.83, 955070.97)
-2. Average amount spent by the female customer will lie between: (673254.77, 750794.02)
+**Hypothesis tests Results**
 
-- Confidence Interval by Marital_Status
-1. Married confidence interval of means: (806668.83, 880384.76)
-2. Unmarried confidence interval of means: (848741.18, 912410.38)
+From 2 sample t-test ,we can also conclude that 
 
-- Confidence Interval by Age
-1. For age 26-35 --> confidence interval of means: (945034.42, 1034284.21)
-2. For age 36-45 --> confidence interval of means: (   823347.80, 935983.62)
-3. For age 18-25 --> confidence interval of means: (   801632.78, 908093.46)
-4. For age 46-50 --> confidence interval of means: (   713505.63, 871591.93)
-5. For age 51-55 --> confidence interval of means: (   692392.43, 834009.42)
-6. For age 55        --> confidence interval of means: (   476948.26, 602446.23)
-7. For age 0-17    --> confidence interval of means: (   527662.46, 710073.17)
+    - Average time_taken_btwn_odstart_and_od_end for population is equal to Average start_scan_to_end_scan for population.
+    - population average actual_time is less than population average start_scan_to_end_scan.
+    - population mean Actual time taken to complete delivery and population mean time_taken_btwn_od_start_and_od_end are also not same.
+    - Mean of actual time is higher than Mean of the OSRM estimated time for delivery
+    - Population average for Actual Time taken to complete delivery trip and segment actual time are same.
+    - Average of OSRM Time & segment-osrm-time for population is not same   
+    - Population Mean osrm time is less than Population Mean segment osrm time.
+    - Average of OSRM distance for population is less than average of segment OSRM distance
+    - population OSRM estimated distance is higher than the actual distance from source to destination warehouse.
 
-**Business Recommendation**
+**From Exploratory Data Analysis**
 
-- Men spent more money than women, So the company should focus on retaining male customers and getting more male customers.
-- Could probably create an additional offer for female buyers, so that the no.of potential female buyers would increase, and hence the average spend would also increase for female buyers.
-- Product_Category - 1, 5, 8, & 11 have the highest purchasing frequency. it means these are the products in these categories are liked more by customers. The company can focus on selling more of these products or selling more of the products which are purchased less.
-- The Average spending of married and unmarried are too close to each other. So, the differentiation between them is very low. Hence, an equal approach to target married and unmarried customers would be advised. Both couple-type products and other products will get sold based on the data given.
-- Unmarried customers spend more money than married customers, So the company should focus on the acquisition of Unmarried customers.
-- Customers in age 18-45 spend more money than others, So the company should focus on the acquisition of customers who are in aged 18-45
-- Male customers living in City_Category C spend more money than other male customers living in B or C, Selling more products in City_Category C will help the company increase its revenue.
-- Walmart should invest in advertisements for expensive products to target male buyers in city category C.
-- Walmart should collaborate with celebrities to promote male products.
-- Walmart should invest in targeted advertisements for individual buyers aged between 51-55.
-- Walmart should engage in different marketing campaigns to target individual buyers in city category B.
-- Walmart should invest in ad campaigns to boost sales of products categorized under 1, 5, and 8 product categories.
+    - we can observe that Mumbai Maharashtra ,Delhi , Gurgaon(Haryana),Bengaluru Karnataka ,Hyderabad Telangana, Chennai Tamil Nadu, Ahmedabad-Gujarat, Pune Maharashtra, Chandigarh Chandigarh and Kolkata West Bengal are some cities have highest amount of trips happening states with in the city. 
+    - If we talk about , not having equal source and destination states , source and destination cities having highest number of trips in between are : Delhi TO Gurgao ,  Gurgaon  TO Bengaluru ,  Bhiwandi/Mumbai TO Pune Maharashtra ,    Sonipat TO    Gurgaon, Haryana
+    - It is also been observed that lots of deliveries are happening to airports  like : Chennai to MAA Chennai international Airport , Pune to Pune Airport (PNQ),Kolkata to    CCU West Bengal Kolkata International Airport , Bengaluru to BLR-Bengaluru International Airport etc. 
+    - From Bar charts , and calculated tables in analysis , we can observe that highest trips are happening is with in the particular cities, in terms of average distance between destinations , we can observe Guwahati to Mumbai , Bangalore to Chandigarh ,Bangalore to Delhi , Benglore to Gurgaon are the longest routes.
+    - The source to destination city routes having largest numbers of trip happening having large distances :
+        - Guwahati TO Bhiwandi, Bengaluru TO Chandigarh, Bengaluru TO Delhi, Gurgaon TO MAA Chennai Airport, Bhiwandi TO Kolkata, Bengaluru TO Kolkata, Gurgaon TO Hyderabad, Gurgaon TO Kolkata
+    - The routes which covered multiple cities in between source and destination :
+        - Most covered cities routes are : Guwahati TO Lakhimpur , Jaipur TO Tanru , Guwahati TO Tura , Mangalore TO Udupi , Ajmer TO Raipur , Mainpuri TO Tilhar . which passes through  more than 8 cities.
+    - Routes which are busiest from source to destinations and states in which highest activities are noticed :
+        - Delhi to Haryana is the busiest route, having more than 400 trips in between. Some of such busy routes are Haryana to Uttar Pradesh , Chandigarh to Punjab , Delhi to Uttar Pradesh . 
+        - Within the state , Maharashtra , Karnataka, Tamil Nadu, Haryana, Telangana, Gujarat , West Bengal and Uttar Pradesh are some states having above 1000 trips. 
+    - Some warehouse having Maximum traffic and hence busiest junctions. 
+        - Bengaluru Karnataka, Gurgaon Haryana, Mumbai Maharashtra, Hyderabad Telangana, Delhi, Pune Maharashtra, Chandigarh Punjab, Chennai Tamil Nadu, Sonipat Haryana, Kolkata West Bengal, Ahmedabad Gujarat, MAA Tamil Nadu, Jaipur Rajasthan, Kanpur Uttar Pradesh, Surat Gujarat, Muzaffrpur Bihar, FBD Haryana, Bhopal Madhya Pradesh, Noida Uttar Pradesh.
+
+Recommendations 
+
+    - As per analysis, It is recommended to use Carting (small vehicles) for delivery with in the city in order to reduce the delivery time, and Heavy trucks for long distance trips or heavy load. based on this , we can optimize the delivery time as well as increase the revenue as per requirements. 
+    - Increasing the connectivity in tier 2 and tier 3 cities along with profession tie-ups with several e-commerce giants can increase the revenue as well as the reputation on connectivity across borders. 
+    - We can work on  optimizing the scanning time on both ends which is start scanning time and end scanning time so that the delivery time can be equated to the OSRM estimated delivery time.
+    - For longer trips (both in terms of time and distance) FTL trips should be preferred.
+    - More trips should start between evening and early mornings.
+    - 'osrm distance' should be used as estimations of the actual trip distances.
+    - 'osrm time' should be used as estimations of the actual trip times.
+    - 'od_time_elapsed' should be used as estimations of start_scan_to_end_scan.
 
 #### Solution to the Business Problem
 
-Link: (https://drive.google.com/drive/folders/1ZjqcNSWsj_618WDkJhG_lBIKazCksEcJ?usp=share_link)
+Link: (https://drive.google.com/drive/folders/1SvivcISkkiDvWcFmYUstF3Vf2iiITbQC?usp=share_link)
