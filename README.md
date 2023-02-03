@@ -55,7 +55,24 @@ The Management team at Walmart Inc. wants to analyze the customer purchase behav
 Link: (https://drive.google.com/drive/folders/1ZjqcNSWsj_618WDkJhG_lBIKazCksEcJ?usp=share_link)
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
-## 5. Delhivery - Feature Engineering 
+## 5. YULU - Feature Engineering 
+
+Yulu is India’s leading micro-mobility service provider, which offers unique vehicles for the daily commute. Starting off as a mission to eliminate traffic congestion in India, Yulu provides the safest commute solution through a user-friendly mobile app to enable shared, solo and sustainable commuting.
+Yulu zones are located at all the appropriate locations (including metro stations, bus stands, office spaces, residential areas, corporate offices, etc) to make those first and last miles smooth, affordable, and convenient!
+Yulu has recently suffered considerable dips in its revenues. They have contracted a consulting company to understand the factors on which the demand for these shared electric cycles depends. Specifically, they want to understand the factors affecting the demand for these shared electric cycles in the Indian market.
+
+#### Business Problem Statement
+
+The company wants to know:
+  >• Which variables are significant in predicting the demand for shared electric cycles in the Indian market?
+  >• How well those variables describe the electric cycle demands  
+  
+#### Solution to the Business Problem
+
+Link: (https://drive.google.com/drive/folders/1mcRFsxBf7bZc12X7Zoq9z5C9n5o-42Db?usp=share_link)  
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+## 6. Delhivery - Feature Engineering 
 
 Delhivery is the largest and fastest-growing fully integrated player in India by revenue in Fiscal 2021. They aim to build the operating system for commerce, through a combination of world-class infrastructure, logistics operations of the highest quality, and cutting-edge engineering and technology capabilities.  
 The Data team builds intelligence and capabilities using this data that helps them to widen the gap between the quality, efficiency, and profitability of their business versus their competitors.
@@ -68,6 +85,5 @@ The Data team builds intelligence and capabilities using this data that helps th
   
 #### Solution to the Business Problem
 
-Link: (https://drive.google.com/drive/folders/1SvivcISkkiDvWcFmYUstF3Vf2iiITbQC?usp=share_link)  
+Link: (https://drive.google.com/drive/folders/1SvivcISkkiDvWcFmYUstF3Vf2iiITbQC?usp=share_link) 
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------
