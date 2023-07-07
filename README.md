@@ -44,7 +44,7 @@ Link: (https://drive.google.com/drive/folders/1t-catAslfYOw2JGEblQFme3OdHo5rIoo?
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## 4. Walmart - Confidence Interval and Central limit theorem (CLT)
 
-Walmart is an American multinational retail corporation that operates a chain of supercenters, discount departmental stores, and grocery stores from the United States. Walmart has more than 100 million customers worldwide.
+Walmart is an American multinational retail corporation that operates a chain of supercenters, discount departmental stores, and grocery stores in the United States. Walmart has more than 100 million customers worldwide.
 
 #### Business Problem
 
@@ -81,9 +81,37 @@ The Data team builds intelligence and capabilities using this data that helps th
 
 - The company wants to understand and process the data coming out of data engineering pipelines:
   >• Clean, sanitize and manipulate data to get useful features out of raw fields  
-  >• Make sense out of the raw data and help the data science team to build forecasting models on it
+  >• Make sense of the raw data and help the data science team to build forecasting models on it
   
 #### Solution to the Business Problem
 
 Link: (https://drive.google.com/drive/folders/1SvivcISkkiDvWcFmYUstF3Vf2iiITbQC?usp=share_link) 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## 7. Jamboree Regression Analysis
+
+Jamboree has helped thousands of students like you make it to top colleges abroad. Be it GMAT, GRE or SAT, their unique problem-solving methods ensure maximum scores with minimum effort.
+They recently launched a feature where students/learners can come to their website and check their probability of getting into the IVY League college. This feature estimates the chances of graduate admission from an Indian perspective.
+
+#### Problem Statement :
+
+- Help Jamboree in understanding what factors are important in graduate admissions and how these factors are interrelated among themselves. It will also help predict one's chances of admission given the rest of the variables.
+
+#### Column Profiling:
+
+    Serial No. (Unique row ID)
+    GRE Scores (out of 340)
+    TOEFL Scores (out of 120)
+    University Rating (out of 5)
+    Statement of Purpose and Letter of Recommendation Strength (out of 5)
+    Undergraduate GPA (out of 10)
+    Research Experience (either 0 or 1)
+    Chance of Admit (ranging from 0 to 1)
+
+#### Concept Used:
+
+- Exploratory Data Analysis
+- Linear Regression
+
+#### Solution to the Business Problem
+Link: (https://drive.google.com/drive/folders/1p6TjuzbAVCItntP1Sbe8FiBLauC3EN20?usp=sharing)
 
