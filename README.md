@@ -89,7 +89,7 @@ Link: (https://drive.google.com/drive/folders/1SvivcISkkiDvWcFmYUstF3Vf2iiITbQC?
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## 7. Jamboree Regression Analysis
 
-Jamboree has helped thousands of students like you make it to top colleges abroad. Be it GMAT, GRE or SAT, their unique problem-solving methods ensure maximum scores with minimum effort.
+Jamboree has helped thousands of students like you make it to top colleges abroad. Be it GMAT, GRE, or SAT, their unique problem-solving methods ensure maximum scores with minimum effort.
 They recently launched a feature where students/learners can come to their website and check their probability of getting into the IVY League college. This feature estimates the chances of graduate admission from an Indian perspective.
 
 #### Problem Statement :
@@ -114,4 +114,6 @@ They recently launched a feature where students/learners can come to their websi
 
 #### Solution to the Business Problem
 Link: (https://drive.google.com/drive/folders/1p6TjuzbAVCItntP1Sbe8FiBLauC3EN20?usp=sharing)
+Notebook Link: https://drive.google.com/file/d/11bdQePbL78mg-JfuRIu6J7rRCqJ-gSAF/view?usp=sharing
+PDF: https://drive.google.com/file/d/1Ei4Ke_xDPxgj_4Tfjg5TPcpPScKa9ozf/view?usp=sharing
 
