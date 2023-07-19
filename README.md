@@ -15,11 +15,11 @@ Link: (https://drive.google.com/drive/folders/15xvP_QgaepiLdKPWKMl04mEM8r_uGTlF?
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## 2.  Target - SQL
 
-Target is one of the world’s most recognized brands and one of America’s leading retailers. Target makes itself a preferred shopping destination by offering outstanding value, inspiration, innovation and an exceptional guest experience that no other retailer can deliver.
+Target is one of the world’s most recognized brands and one of America’s leading retailers. Target makes itself a preferred shopping destination by offering outstanding value, inspiration, innovation, and an exceptional guest experience that no other retailer can deliver.
 
 #### Business Problem
 
-This business case has information of 100k orders from 2016 to 2018 made at Target in Brazil. Its features allows viewing an order from multiple dimensions: from order status, price, payment and freight performance to customer location, product attributes and finally reviews written by customers.
+This business case has information on 100k orders from 2016 to 2018 made at Target in Brazil. Its features allow viewing an order from multiple dimensions: from order status, price, payment and freight performance to customer location, product attributes, and finally reviews written by customers.
 
 #### Solution to the Business Problem
 
@@ -87,12 +87,51 @@ The Data team builds intelligence and capabilities using this data that helps th
 
 Link: (https://drive.google.com/drive/folders/1SvivcISkkiDvWcFmYUstF3Vf2iiITbQC?usp=share_link) 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
-## 7. Jamboree Regression Analysis
+## 7. Apollo Hospitals - Hypothesis testing
+
+Apollo Hospitals was established in 1983, renowned as the architect of modern healthcare in India. As the nation's first corporate hospital, Apollo Hospitals is acclaimed for pioneering the private healthcare revolution in the country.
+
+As a data scientist working at Apollo 24/7, the ultimate goal is to tease out meaningful and actionable insights from Patient-level collected data.
+
+You can help Apollo hospitals to be more efficient, influence diagnostic and treatment processes, and to map the spread of a pandemic.
+
+One of the best examples of data scientists making a meaningful difference at a global level is in the response to the COVID-19 pandemic, where they have improved information collection, provided ongoing and accurate estimates of infection spread and health system demand, and assessed the effectiveness of government policies.
+
+#### Business Problem Statement
+
+1. Clean, sanitize and manipulate data to identify which variables are significant in predicting the reason for hospitalization for different regions.
+2. Analyze how well some variables like viral load, smoking, and Severity Level describe the hospitalization charges.
+
+#### Dataset
+https://d2beiqkhq929f0.cloudfront.net/public_assets/assets/000/001/681/original/scaler_apollo_hospitals.csv
+
+#### Column Profiling
+
+Age: This is an integer indicating the age of the primary beneficiary (excluding those above 64 years, since they are generally covered by the government).
+Sex: This is the policyholder's gender, either male or female
+Viral Load: Viral load refers to the amount of virus in an infected person's blood
+Severity Level: This is an integer indicating how severe the patient is
+Smoker: This is yes or no depending on whether the insured regularly smokes tobacco.
+Region: This is the beneficiary's place of residence in Delhi, divided into four geographic regions - northeast, southeast, southwest, or northwest
+Hospitalization charges: Individual medical costs billed to health insurance
+
+#### Concept Used
+
+- Graphical and Non-Graphical Analysis
+- 2-sample t-test: testing for differences across populations
+- ANOVA
+- Chi-square
+
+#### Solution to Given Problem
+
+Link: (https://drive.google.com/file/d/1zbxGWYVydS8IZap2XSpdvP8tZUurgug8/view?usp=sharing)
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## 8. Jamboree Regression Analysis
 
 Jamboree has helped thousands of students like you make it to top colleges abroad. Be it GMAT, GRE, or SAT, their unique problem-solving methods ensure maximum scores with minimum effort.
 They recently launched a feature where students/learners can come to their website and check their probability of getting into the IVY League college. This feature estimates the chances of graduate admission from an Indian perspective.
 
-#### Problem Statement :
+#### Business Problem Statement
 
 - Help Jamboree in understanding what factors are important in graduate admissions and how these factors are interrelated among themselves. It will also help predict one's chances of admission given the rest of the variables.
 
@@ -114,10 +153,11 @@ They recently launched a feature where students/learners can come to their websi
 
 #### Solution to the Business Problem
 Link: (https://drive.google.com/drive/folders/1p6TjuzbAVCItntP1Sbe8FiBLauC3EN20?usp=sharing)
-Notebook Link: https://drive.google.com/file/d/11bdQePbL78mg-JfuRIu6J7rRCqJ-gSAF/view?usp=sharing  
-PDF: https://drive.google.com/file/d/1Ei4Ke_xDPxgj_4Tfjg5TPcpPScKa9ozf/view?usp=sharing  
+
+- Notebook Link: https://drive.google.com/file/d/11bdQePbL78mg-JfuRIu6J7rRCqJ-gSAF/view?usp=sharing  
+- PDF: https://drive.google.com/file/d/1Ei4Ke_xDPxgj_4Tfjg5TPcpPScKa9ozf/view?usp=sharing  
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
-## 8. Cars24
+## 9. Cars24
 Cars24 is one of the leading used-car buying and selling platforms in India.
 
 Current methodology to estimate the selling price has three major components
@@ -126,7 +166,7 @@ Rule-based calculations for the depreciation of the car
 The rule-based calculation for the condition of the vehicle
 As the Pricing Data Scientist working at Cars24, you are given a task
 
-#### Problem Statement :
+#### Business Problem Statement
 
 - To automate the process of estimating the price of the used car
 
