@@ -86,6 +86,7 @@ The Data team builds intelligence and capabilities using this data that helps th
 #### Solution to the Business Problem
 
 Link: (https://drive.google.com/drive/folders/1SvivcISkkiDvWcFmYUstF3Vf2iiITbQC?usp=share_link) 
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## 7. Apollo Hospitals - Hypothesis testing
 
@@ -125,6 +126,7 @@ Hospitalization charges: Individual medical costs billed to health insurance
 #### Solution to Given Problem
 
 Link: (https://drive.google.com/file/d/1zbxGWYVydS8IZap2XSpdvP8tZUurgug8/view?usp=sharing)
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## 8. Jamboree Regression Analysis
 
@@ -155,7 +157,8 @@ They recently launched a feature where students/learners can come to their websi
 Link: (https://drive.google.com/drive/folders/1p6TjuzbAVCItntP1Sbe8FiBLauC3EN20?usp=sharing)
 
 - Notebook Link: https://drive.google.com/file/d/11bdQePbL78mg-JfuRIu6J7rRCqJ-gSAF/view?usp=sharing  
-- PDF: https://drive.google.com/file/d/1Ei4Ke_xDPxgj_4Tfjg5TPcpPScKa9ozf/view?usp=sharing  
+- PDF: https://drive.google.com/file/d/1Ei4Ke_xDPxgj_4Tfjg5TPcpPScKa9ozf/view?usp=sharing
+  
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## 9. Cars24
 Cars24 is one of the leading used-car buying and selling platforms in India.
@@ -184,3 +187,5 @@ Also, some plots are made manually using seaborn. The intention is to make the s
 
 #### Solution to Business Problem
 Link: (https://drive.google.com/drive/folders/1Rnf_mru9cy8qES8KOlmfMOGywR1tv2DC?usp=sharing)
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
