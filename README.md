@@ -189,7 +189,7 @@ Also, some plots are made manually using seaborn. The intention is to make the s
 Link: (https://drive.google.com/drive/folders/1Rnf_mru9cy8qES8KOlmfMOGywR1tv2DC?usp=sharing)
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
-## 10.  Loan Tap
+## 10. LoanTap - Logistic Regression
 LoanTap is an online platform committed to delivering customized loan products to millennials. They innovate in an otherwise dull loan segment, to deliver instant, flexible loans on consumer-friendly terms to salaried professionals and businessmen.
 
 The data science team at LoanTap is building an underwriting layer to determine the creditworthiness of MSMEs as well as individuals.
